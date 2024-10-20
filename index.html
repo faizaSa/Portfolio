@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar {
+            display: flexbox;
+            height: 80px;
+            background-color: black;
+            border: 1px solid rgb(230, 29, 29);
+            scroll-behavior: smooth;
+            cursor: pointer;
+
+
+        }
+
+        li {
+            text-align: right;
+            justify-content: space-between;
+            color: aliceblue;
+            padding: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: x-large;
+
+            display: inline-block;
+            align-items: baseline;
+            padding-bottom: 30px;
+            cursor: pointer;
+
+        }
+
+        li:hover {
+            color: rgb(230, 29, 29);
+            text-decoration: underline;
+            transition: 0.3s;
+        }
+
+        label {
+            color: rgb(230, 29, 29);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60px;
+            font-weight: bolder;
+            padding-right: 180px;
+            padding-left: 30px
+        }
+
+        span {
+            color: aliceblue;
+            text-shadow: 1px solid rgb(230, 29, 29);
+
+        }
+
+        span:hover {
+            color: rgb(230, 29, 29);
+            transition: 0.3s;
+        }
+
+        .Contact {
+            background-color: rgb(230, 29, 29);
+            padding: 8px;
+            text-align: center;
+            border-radius: 5px;
+            border-color: aliceblue;
+            margin-bottom: 15px;
+        }
+
+        .Contact:hover {
+            color: black;
+            transition: 0.3s;
+            text-decoration: none;
+
+        }
+
+        .home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            gap: 5em;
+            padding: 20px 12% 0;
+        }
+
+        .home2 h1 {
+            font-size: 50px;
+            font-weight: bolder;
+        }
+
+        .home2 h2 {
+            font-size: 60px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+        }
+
+        .home2 h2 span {
+            color: rgb(230, 29, 29);
+            font-size: 60px;
+            font-weight: bolder;
+        }
+
+        p {
+            text-align: justify;
+            font-size: medium;
+            font-style: normal;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .gola {
+            width: 500px;
+            height: 500px;
+            border-radius: 50px;
+            display: flex;
+            box-shadow: 0 0 25px rgb(56, 54, 54),
+                0 0 25px rgb(5, 5, 5);
+            border-radius: 60%;
+        }
+
+        button {
+            background-color: black;
+            padding: 15px;
+            width: 120px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 6px;
+            color: white;
+            margin-bottom: 15px;
+            border-width: 3px;
+            border-color: rgb(112, 98, 98);
+            font-size: 15px;
+            cursor: pointer;
+
+        }
+
+        button:hover {
+            color: black;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .about {
+            background-color: rgb(230, 29, 29);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            gap: 5em;
+            padding: 20px 12% 0;
+        }
+
+        .aboutme h1 {
+            color: black;
+            font-size: 50px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .aboutme button {
+            background-color: rgb(7, 7, 7);
+            padding: 15px;
+            width: 120px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 6px;
+            color: white;
+            margin-bottom: 15px;
+            border-width: 3px;
+            border-color: rgb(155, 138, 138);
+            font-size: 15px;
+            cursor: pointer;
+
+
+
+        }
+
+        button:hover {
+            color: rgb(230, 29, 29);
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .exp {
+            width: 100%;
+            height: 80vh;
+            background-color: rgb(211, 211, 211);
+            display: flexbox;
+        }
+.skills{
+    display:inline-block;
+    padding: 0 20px;
+
+   
+
+
+}
+        .exp h1 {
+            font-size: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            text-align: center;
+            padding-top: 30px;
+            transition: 0.3s;
+        }
+
+        .exp h1 span {
+            color: rgb(230, 29, 29);
+
+        }
+
+        .skills h2 {
+            text-align: left;
+            padding-left: 60px;
+            font-size: xx-large;
+            font-weight: bolder;
+        }
+
+        .skills p {
+            text-align: left;
+            padding-left: 60px;
+
+        }
+
+        .skill-container {
+            width: 60%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 20px 0;
+            margin-left: 400px;
+            cursor: pointer;
+            
+            
+
+
+        }
+
+        .skill-bar {
+            height: 20px;
+            width: 0;
+            /* This will be set dynamically */
+            background-color: rgb(230, 29, 29);
+            border-radius: 5px;
+            text-align: center;
+            line-height: 20px;
+            /* Center text vertically */
+            color: white;
+            position:relative;
+
+        }
+
+        .skill-label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--navbar section-->
+    <nav class="navbar">
+        <label> Faiza<span> Ali</span></label>
+        <LI>Portfolio</LI>
+        <Li>About</Li>
+        <Li></Li> Skills</Li>
+        <Li>Services</Li>
+        <Li>Projects</Li>
+
+        <li class="Contact">Contact Us</li>
+
+    </nav>
+    <!--home section-->
+    <section class="home">
+        <div class="home2">
+            <h1>Hi!</h1>
+            <h2>I am <span> Faiza</span><br>
+                Web Developer</h2>
+            <p><strong>Lorem ipsum </strong>dolor sit, amet consectetur adipisicing elit. Blanditiis voluptate
+                cumque maiores unde corrupti aperiam error laboriosam, vitae mollitia, odit dolore. Laborum
+                architecto vel eligendi nemo etnatus odit? Laudantium!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis voluptate
+                cumque maiores unde corrupti aperiam error laboriosam, vitae mollitia, odit dolore. Laborum
+                architecto vel eligendi nemo etnatus odit? Laudantium!</p><br>
+
+            <div class="btn">
+                <button class="button">Experience</button>
+                <button class="button">Contact me</button>
+
+            </div>
+        </div>
+
+        <img class="gola" src="./pngtree-clipart-of-beautiful-young-girl-using-laptop-png-image_13125436.png"
+            alt="profile pic">
+    </section>
+    <!-- About section -->
+    <section class="about">
+        <img class="gola" src="./woman-coding-html-programming-laptop-screen_1111209-7583.avif" alt="profile pic">
+        <div class="aboutme">
+            <h1>About<span> Me</span></h1>
+            <h2> Assalam o alikum</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iste voluptas eligendi corporis? Maxime
+                et, tenetur unde iusto, nemo consequuntur vel a impedit laudantium sunt aspernatur. Aut praesentium
+                consectetur dicta?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo maxime neque
+                repellendus nulla temporibus unde asperiores assumenda, laborum ab, corporis obcaecati aut, quo voluptas
+                nihil exercitationem. Magnam harum nihil tempore!</p>
+            <div class="btn">
+                <button class="button">Read more</button>
+            </div>
+        </div>
+
+
+    </section>
+    <!--Experience-->
+    <section class="exp">
+        <h1> My <span>Skills</span> </h1>
+        <div class="skills">
+        
+        <h2>My creative skills</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing. <br>
+            iste voluptas eligendi corporis? Maxime et, tenetur <br>
+             iusto, nemo consequuntur vel a impedit laudantiumsunt 
+             <br>aspernatur. Aut praesentiumconsectetur dicta?Lorem <br>
+             ipsum dolor sit amet, consectetur adipisicing elit.<br>
+              Nemo maxime nequerepellendus nulla temporibus unde
+              <br> asperiores assumenda, laborum ab, corporis <br>
+               aut, quo voluptas nihil exercitationem. Magnam harum!</p>
+               <div class="btn">
+        <button class="button" style="position: absolute; margin-left: 50px;" >Read more</button>
+</div>
+
+    </div>
+        <div class="skills">
+        <div class="skill-label">HTML
+            <div class="skill-container">
+                <div class="skill-bar" style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="skill-label">CSS</div>
+            <div class="skill-container">
+                <div class="skill-bar" style="width: 80%;">80%</div>
+            </div>
+        
+        <div class="skill-label">JavaScript
+            <div class="skill-container">
+                <div class="skill-bar" style="width: 70%;">70%</div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+
+</html>
